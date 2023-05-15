@@ -15,4 +15,4 @@ def index():
     return render_template('index.html', phones=phones)
 
 if __name__ == "__main__":
-    app.run(host='192.168.1.37',port='8594')
+    app.run(host='0.0.0.0',port='8594')
