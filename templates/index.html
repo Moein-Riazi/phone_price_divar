@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}MOEIN_RIAZI{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Phone_Price</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for phone in phones %}
+                    <tr>
+                        <td>{{ phone[0] }}</td>
+                        <td>{{ phone[1] }}</td>
+                        <td>{{ phone[2] }}</td>
+                        <td>{{ phone[3] }}</td>
+                        <td><a href="{{ phone[4] }}">{{ phone[4] }}</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
