@@ -7,3 +7,5 @@ This is a just for fun program:) As I mentioned this program is just for fun and
 3.If you want to change the config only run starter again.
 
 4.If you need to update database of price and phones only execute "./starter -p" **-p is option that acts as permanent
+
+5.If you want to see all URLs that fit your budget only execute "./starter -v" and enter your budget. ;)
