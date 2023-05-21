@@ -11,6 +11,7 @@ selected_city = environ.get("CITY")
 selected_cat = environ.get("CATEGORY")
 selected_brand = environ.get("BRAND")
 selected_model = environ.get("MODEL")
+fit_price = environ.get("FIT_PRICE")
 
 #print(selected_city,selected_cat,selected_brand,selected_model)
 #'''program works well but it needs to be complete in cities and models of brands'''
@@ -46,6 +47,8 @@ urls = re.findall(r'"url":"(.*?)"', text)
 
 for i in range(len(names)):
     data = f"INSERT INTO phones VALUES('{names[i]}','{prices[i]}','{descriptions[i]}','{urls[i]}');"
+    if prices[i] >= fit_price:
+        print(f"This phone is cheaper than {fit_price} ",urls[i])
     cursor.execute(data)
                 
 

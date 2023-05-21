@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$1" == "-v" ]; then
+    read -p "Enter the price you want: " FIT_PRICE
+    echo -e "\nexport FIT_PRICE=$FIT_PRICE" >> config.sh
+fi
+
 if [ "$1" == "-p" ]; then
     MASIR=$(pwd)
     crontab -l > mycron
@@ -8,7 +13,7 @@ if [ "$1" == "-p" ]; then
     echo "successfull!, program will automatically run every 30 minutes"
 fi
 
-if [ "$1" == "change" ]; then
+if [ "$1" == "-c" ]; then
     python3 configs.py
 fi
 
