@@ -22,7 +22,7 @@ cursor.execute(table)
 #orginal URL = https://divar.ir/s/qom/mobile-phones/samsung/samsung-galaxy-a53-5g?goods-business-type=all
 
 url = f"https://divar.ir/s/{selected_city}/{selected_cat}/{selected_brand}/{selected_model}?goods-business-type=all"
-print(url)
+#print(url)
 page = urlopen(url)
 html_bytes = page.read()
 html = html_bytes.decode("utf-8")

@@ -5,3 +5,5 @@ This is a just for fun program:) As I mentioned this program is just for fun and
 2.Open your browser and enter this URL: http://localhost:8594
 
 3.If you want to change the config only run starter again.
+
+4.If you need to update database of price and phones only execute "./starter -p" **-p is option that acts as permanent
