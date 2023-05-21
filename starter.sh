@@ -23,4 +23,5 @@ fi
 
 python3 phone-price.py
 
-nohup python3 db_show.py &
+#nohup python3 db_show.py > moein & 1>&2 /dev/null 
+nohup  python3 db_show.py > /dev/null 2>&1&

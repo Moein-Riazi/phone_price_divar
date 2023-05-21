@@ -47,8 +47,9 @@ urls = re.findall(r'"url":"(.*?)"', text)
 
 for i in range(len(names)):
     data = f"INSERT INTO phones VALUES('{names[i]}','{prices[i]}','{descriptions[i]}','{urls[i]}');"
-    if prices[i] >= fit_price:
-        print(f"This phone is cheaper than {fit_price} ",urls[i])
+    if fit_price is not None:
+        if prices[i] <= fit_price:
+            print(f"This phone is cheaper than {fit_price} ",urls[i])
     cursor.execute(data)
                 
 
